@@ -8,14 +8,17 @@ for i in range(len(orig_text)-1, -1, -1):
 
 orig_text_list = []
 path = ''
-for symb in range(len(orig_text)):
-    if orig_text[symb] == ' ':
+i = 0
+while i <= (len(orig_text)-1):
+    if orig_text[i] == ' ':
         orig_text_list.append(path)
         path = ''
-    if orig_text[symb] != ' ':
-        path += orig_text[symb]
-    if symb == len(orig_text) - 1:
-        orig_text_list.append(path)
+    else:
+        path+=orig_text[i]
+    i+=1
+
+if path:
+    orig_text_list.append(path)
 
 print(orig_text_list)
 for i in range(len(orig_text_list)-1, -1, -1):
