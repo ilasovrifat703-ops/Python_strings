@@ -6,21 +6,17 @@ reverse_words_pos = ''
 for i in range(len(orig_text)-1, -1, -1):
     reverse_text += orig_text[i]
 
-orig_text_list = []
 path = ''
-i = 0
-while i <= (len(orig_text)-1):
-    if orig_text[i] == ' ':
-        orig_text_list.append(path)
+for symb in range(len(orig_text)):
+    if orig_text[symb] == ' ':
+        reverse_words_pos = path + ' ' + reverse_words_pos
         path = ''
     else:
-        path+=orig_text[i]
-    i+=1
+        path += orig_text[symb]
 
 if path:
-    orig_text_list.append(path)
+    reverse_words_pos = path + ' ' + reverse_words_pos
 
-for i in range(len(orig_text_list)-1, -1, -1):
-    reverse_words_pos += orig_text_list[i] + ' '
+reverse_words_pos = reverse_words_pos[:-1]
 
 print(f'Перевернутый текст: {reverse_text}\nСлова в обратном порядке: {reverse_words_pos}')
