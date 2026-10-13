@@ -19,4 +19,4 @@ if path:
 
 reverse_words_pos = reverse_words_pos[:-1]
 
-print(f'Перевернутый текст: {reverse_text}\nСлова в обратном порядке: {reverse_words_pos}')
+print(f'Перевернутый текст: {reverse_text}\nВ обратном порядке: {reverse_words_pos}')
