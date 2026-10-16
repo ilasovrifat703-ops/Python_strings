@@ -1,4 +1,5 @@
 orig_text = input('Введите текст: ')
+
 reverse_text = ''
 reverse_words_pos = ''
 path = ''
