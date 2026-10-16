@@ -11,6 +11,7 @@ while i <= (len(orig_text) - 1):
     else:
         path += orig_text[i]
     i += 1
+    
 if path:
     orig_text_list.append(path)
 
